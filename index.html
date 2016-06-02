@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Matroska - Test Files</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+</head>
+<style>
+    #content { width: 800px; margin: 0px auto;}
+    body { color: black; font: normal normal normal 85%/normal Arial, Helvetica, sans-serif;}
+</style>
+<body>
+<div align="center"><img src="logo3_256x256.png" title="Matroska logo"/></div>
+<div id="content">
+<h1>Matroska Test Files - Wave 1</h1>
+<p>This suite of files was created to validate the various Matroska players, parsers to make sure users get a consistent experience when moving their files on various programs/hardware. Since Matroska has a lot of features, it is hard to tell which are essential, which are encouraged and which are deprecated. The files presented here represent the minimum support a player should have to fully qualify as a Matroska player.</p>
+
+<h2>Codecs</h2>
+<p>Matroska can support any codec that is around. That doesn't mean 
+softwares should support all of them. For various reasons softwares and 
+hardwares can't always be upgraded to support all codecs around. But in 
+the other hand there are a few safe codecs that are often found in 
+Matroska and WebM that should be supported. These codec can be found
+in various resolutions and features so even with the right codec support,
+it is not guaranteed that an implementation may support all the possibilities
+of a codec (it is hardly ever the case). This document will not cover codec
+details. But here is a list of codecs that are commonly found in Matroska:</p>
+<h3>Video codecs</h3>
+<ul>
+<li>H264/AVC/MPEG4 Part 10, usually up to 1080p</li>
+<li>MPEG4 Part 2, usually up to 720p</li>
+<li>VP8, usually up to 720p</li>
+<li>Theora, usually up to 720p</li>
+</ul>
+<h3>Audio codecs</h3>
+<ul>
+<li>MPEG Audio Layer 3 (MP3)</li>
+<li>Vorbis</li>
+<li>AAC, AAC+, eACC+</li>
+<li>AC-3</li>
+<li>DTS</li>
+<li>FLAC</li>
+</ul>
+<h3>Subtitles codecs</h3>
+<ul>
+<li>plain UTF-8 text</li>
+<li>ASS/SSA text</li>
+<li>VOBSUB (bitmaps from DVDs)</li>
+</ul>
+
+<h2>Audio only files</h2>
+<p>It is important to note that audio can also be used in audio only files, usually with the .mka extension. Those files should be handled as well, as long as the codec is supported.</p>
+
+<h2>Extra features</h2>
+<p>There are a number of features that are not essential to the playback experience but could really improve it, like support for tags, cover art, embedded fonts, segment linking. We won't blame you if you don't support these, but your users/customers will probably ask for it at some point. There is also 3D support that is meant to grow in the coming years. Matroska should be able to support all the formats, but given the subject is really new, it's not covered by this suite of files.</p>
+
+<h2>Test Files</h2>
+<h3>1. Basic file</h3>
+<p>This file is the absolute minimum a compliant player should be able to handle.</p><p>The sample comes from the <a href="http://www.bigbuckbunny.org/index.php/download/">Big Buck Bunny</a> open project. It contains MPEG4.2 (DivX) video, (854x480)  MP3 audio, uses only SimpleBlock (matroska DocType v2)</p>
+
+<h3>2. Non default timecodescale &amp; aspect ratio</h3>
+<p>This file has different features that need to be looked at carefully. The main one is the global TimecodeScale in the SegmentInfo is set to 100,000 rather than the default 1,000,000. That value affects the values of the file Duration in the Segment and the Clusters Timecode. The aspect ratio has also been stretched artificially to represent a 2.35 movie (from the original 16:9 aspect ratio). This file also contains CRC-32 values in the EBML header, the MetaSeek, the Segment Info, the Tracks and the Tags and PrevSize/Position in the Clusters for better error recovery.</p><p>It contains H264 (1024x576 pixels), and stereo AAC. The source material is taken from the <a href="http://orange.blender.org/download">Elephant Dreams</a> video project</p>
+
+<h3>3. Header stripping &amp; standard block</h3>
+<p>This file is using BlockGroup+Block only for audio and video frames. It also removes 2 bytes off each video and audio frame since they are all equal. These 2 bytes have to be put back in the frame before decoding. his file also contains CRC-32 values in the EBML header, the MetaSeek, the Segment Info, the Tracks and the Tags and PrevSize/Position in the Clusters for better error recovery.</p>
+<p>It contains H264 (1024x576 pixels), and stereo MP3. The source material is taken from the <a href="http://orange.blender.org/download">Elephant Dreams</a> video project</p>
+
+<h3>4. Live stream recording</h3>
+<p>This file is using the EBML feature that allows Master elements to have no known size. It is used for live streams because they don't know ahead of time the size of the Segment (virtually infinite) and even sometimes the size of the Clusters (no caching on the server side). The first timecode of the file also doesn't start at 0 since it's supposed to be a capture from something continuous. The SegmentInfo also doesn't contain any Duration as it is not know.</p><p>The sample comes from the <a href="http://www.bigbuckbunny.org/index.php/download/">Big Buck Bunny</a> open project. It contains Theora video (1280x720), Vorbis audio, uses only SimpleBlock (matroska DocType v2)</p>
+<p>A similar file can be created with <a href="http://www.matroska.org/downloads/mkclean.html">mkclean</a> using the &quot;--live&quot; option</p>
+
+<h3>5. Multiple audio/subtitles</h3>
+<p>This has a main audio track in english and a secondary audio track in english. It also has subtitles in English, French, German, Hungarian, Spanish, Italian and Japanese. The player should provide the possibility to switch between these streams.</p>
+<p>The sample contains H264 (1024x576 pixels), and stereo AAC and commentary in AAC+ (using SBR). The source material is taken from the <a href="http://orange.blender.org/download">Elephant Dreams</a> video project</p>
+
+<h3>6. Different EBML head sizes &amp; cue-less seeking</h3>
+<p>This file is a test of the EBML parser of the player. The size of the Segment and Block/SimpleBlock is coded using 1 (or the minimum possible the size) and 8 bytes randomly. The file also have no Cues entry. So seeking should be disabled or look for Cluster boundaries in the stream (much slower than using Cues).</p>
+<p>The sample comes from the <a href="http://www.bigbuckbunny.org/index.php/download/">Big Buck Bunny</a> open project. It contains MPEG4.2 (DivX) video, (854x480)  MP3 audio, uses only SimpleBlock (matroska DocType v2)</p>
+
+<h3>7. Extra unknown/junk elements &amp; damaged</h3>
+<p>This file contains junk elements (elements not defined in the specs) either at the beggining or the end of Clusters. These elements should be skipped. There is also an invalid element at 451417 that should be skipped until the next valid Cluster is found.</p>
+<p>The sample contains H264 (1024x576 pixels), and stereo AAC. The source material is taken from the <a href="http://orange.blender.org/download">Elephant Dreams</a> video project</p>
+
+<h3>8. Audio gap</h3>
+<p>This file has a few audio frames missing between timecodes 6.019s and 6.360s. The playback should not stop, and if possible the video should not be skipped where the audio is missing</p>
+<p>The sample contains H264 (1024x576 pixels), and stereo AAC. The source material is taken from the <a href="http://orange.blender.org/download">Elephant Dreams</a> video project</p>
+
+<h2>Tools</h2>
+<p>All these files were created with <a href="http://www.bunkus.org/videotools/mkvtoolnix/">mkvmerge</a> and <a href="http://www.matroska.org/downloads/mkclean.html">mkclean</a>. They also pass the <a href="http://www.matroska.org/downloads/mkvalidator.html">mkvalidator</a> test tool (the test file 4 needs the --live option to correctly valdiate the file), except for the damaged file, as it is damaged.</p>
+
+<h2>Contact</h2>
+<p>If you have any question about these files please contact us at contact@matroska.org</p>
+
+<h2>Changelog</h2>
+<ul>
+<li>2010-08-21: initial version</li>
+</ul>
+
+</div>
+</body>
+</html>
