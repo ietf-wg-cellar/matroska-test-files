@@ -16,3 +16,9 @@ mkclean reference.mkv
 The EBML Header contains no mandated DocType Element.
 
 [no_DocType.mkv](no_DocType.mkv)
+
+## docTypeReadVersion_greaterthan_docTypeVersion.mkv
+
+The docTypeReadVersion MUST be less than docTypeVersion but here it isn't.
+
+[docTypeReadVersion_greaterthan_docTypeVersion.mkv](docTypeReadVersion_greaterthan_docTypeVersion.mkv)
