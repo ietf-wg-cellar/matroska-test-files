@@ -22,3 +22,9 @@ The EBML Header contains no mandated DocType Element.
 The docTypeReadVersion MUST be less than docTypeVersion but here it isn't.
 
 [docTypeReadVersion_greaterthan_docTypeVersion.mkv](docTypeReadVersion_greaterthan_docTypeVersion.mkv)
+
+## EBMLReadVersion_greaterthan_EBMLVersion.mkv
+
+The EBMLReadVersion MUST be less than EBMLVersion but here it isn't.
+
+[EBMLReadVersion_greaterthan_EBMLVersion.mkv](EBMLReadVersion_greaterthan_EBMLVersion.mkv)
