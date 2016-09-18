@@ -34,3 +34,9 @@ The EBMLReadVersion MUST be less than EBMLVersion but here it isn't.
 The EBMLVersion is restricted to a range of defined values. At the time of this writing, only EBMLVersion=1 is defined. This value has an EBMLVersion of 255.
 
 [currently_undefined_EBMLVersion.mkv](currently_undefined_EBMLVersion.mkv)
+
+
+## level_0_crc.mkv
+
+The CRC-32 Element is not allowed at Level 0 but here it is included in between the EBML Header and Segment Element.
+[level_0_crc.mkv](level_0_crc.mkv)
