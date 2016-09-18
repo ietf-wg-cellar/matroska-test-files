@@ -40,3 +40,9 @@ The EBMLVersion is restricted to a range of defined values. At the time of this 
 
 The CRC-32 Element is not allowed at Level 0 but here it is included in between the EBML Header and Segment Element.
 [level_0_crc.mkv](level_0_crc.mkv)
+
+## too_many_copies_of_DocTypeVersion.mkv
+
+DocTypeVersion has maxOccurs=1 but here it is included twice in the EBML Header.
+
+[too_many_copies_of_DocTypeVersion.mkv](too_many_copies_of_DocTypeVersion.mkv)
