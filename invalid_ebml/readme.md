@@ -46,3 +46,9 @@ The CRC-32 Element is not allowed at Level 0 but here it is included in between 
 DocTypeVersion has maxOccurs=1 but here it is included twice in the EBML Header.
 
 [too_many_copies_of_DocTypeVersion.mkv](too_many_copies_of_DocTypeVersion.mkv)
+
+## too_many_copies_of_DocTypeVersion_and_conflicting_values.mkv
+
+Similar to [too_many_copies_of_DocTypeVersion.mkv](too_many_copies_of_DocTypeVersion.mkv) but here the two copies of DocTypeVersion include conflicting values, `3` and `4`.
+
+[too_many_copies_of_DocTypeVersion_and_conflicting_values.mkv](too_many_copies_of_DocTypeVersion_and_conflicting_values.mkv)
