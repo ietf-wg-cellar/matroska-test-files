@@ -52,3 +52,10 @@ DocTypeVersion has maxOccurs=1 but here it is included twice in the EBML Header.
 Similar to [too_many_copies_of_DocTypeVersion.mkv](too_many_copies_of_DocTypeVersion.mkv) but here the two copies of DocTypeVersion include conflicting values, `3` and `4`.
 
 [too_many_copies_of_DocTypeVersion_and_conflicting_values.mkv](too_many_copies_of_DocTypeVersion_and_conflicting_values.mkv)
+
+## invalid_EBML_ElementDataSize_in_EBMLHeader.mkv
+
+The Elements of the EBML Header are restricted to Element Data Size values that are 4 octets in length or less. This file includes a 5 octet long Element Data Size for DocType.
+
+[invalid_EBML_ElementDataSize_in_EBMLHeader.mkv](invalid_EBML_ElementDataSize_in_EBMLHeader.mkv)
+
