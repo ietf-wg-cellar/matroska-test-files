@@ -106,3 +106,9 @@ The CRC-32 Element in the EBML Header contains an invalid hash.
 
 [crc_element_has_invalid_hash.mkv](crc_element_has_invalid_hash.mkv)
 
+## crc_element_is_not_first.mkv
+
+The CRC-32 Element in the EBML Header is not the first Child Element of its Parent Element.
+
+[crc_element_is_not_first.mkv](crc_element_is_not_first.mkv)
+
