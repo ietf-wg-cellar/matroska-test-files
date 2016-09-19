@@ -82,3 +82,9 @@ The EBMLMaxSizeLength is set to `4` but the file contains one Element (a Void) w
 
 [lower_EBMLMaxSizeLength_than_elements_are_using.mkv](lower_EBMLMaxSizeLength_than_elements_are_using.mkv)
 
+## inefficient_elementid.mkv
+
+The EBML Version Element ID is written as 0x200286 rather than as 0x4286.
+
+[inefficient_elementid.mkv](inefficient_elementid.mkv)
+
