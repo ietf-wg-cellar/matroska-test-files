@@ -88,3 +88,9 @@ The EBML Version Element ID is written as 0x200286 rather than as 0x4286.
 
 [inefficient_elementid.mkv](inefficient_elementid.mkv)
 
+## unknown_element.mkv
+
+An unknown element (with Element ID 0x81) is stored at the beginning of the EBML Header. 
+
+[unknown_element.mkv](unknown_element.mkv)
+
