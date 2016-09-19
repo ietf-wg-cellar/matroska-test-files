@@ -112,3 +112,9 @@ The CRC-32 Element in the EBML Header is not the first Child Element of its Pare
 
 [crc_element_is_not_first.mkv](crc_element_is_not_first.mkv)
 
+## non_ascii_in_string_element.mkv
+
+A string element (Track/Language) starts with a non-ascii 0x19 octet.
+
+[non_ascii_in_string_element.mkv](non_ascii_in_string_element.mkv)
+
