@@ -118,3 +118,10 @@ A string element (Track/Language) starts with a non-ascii 0x19 octet.
 
 [non_ascii_in_string_element.mkv](non_ascii_in_string_element.mkv)
 
+## invalid_boolean.mkv
+
+A Unsigned Integer Element that is defined for boolean use contains a non-boolean value (in this case FlagLacing).
+
+[invalid_boolean.mkv](invalid_boolean.mkv)
+
+
