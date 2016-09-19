@@ -70,3 +70,9 @@ Using an invalid EBMLMaxIDLength value of `3`.
 
 [invalid_EBMLMaxIDLength.mkv](invalid_EBMLMaxIDLength.mkv)
 
+## higher_EBMLMaxSizeLength_than_matroska_allows.mkv
+
+Matroska limits EBMLMaxSizeLength to `8` but this file uses `9`.
+
+[higher_EBMLMaxSizeLength_than_matroska_allows.mkv](higher_EBMLMaxSizeLength_than_matroska_allows.mkv)
+
