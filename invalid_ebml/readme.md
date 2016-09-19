@@ -100,3 +100,9 @@ A non-Master Element (DocType) uses an unknown Element Data Size.
 
 [unknown_sized_non_master_element.mkv](unknown_sized_non_master_element.mkv)
 
+## crc_element_has_invalid_hash.mkv
+
+The CRC-32 Element in the EBML Header contains an invalid hash.
+
+[crc_element_has_invalid_hash.mkv](crc_element_has_invalid_hash.mkv)
+
