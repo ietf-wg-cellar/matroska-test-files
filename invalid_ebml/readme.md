@@ -124,4 +124,10 @@ A Unsigned Integer Element that is defined for boolean use contains a non-boolea
 
 [invalid_boolean.mkv](invalid_boolean.mkv)
 
+## element_outside_of_size_range.mkv
+
+The SegmentUID has an Element Data Size of 8 although 16 is required per its definition.
+
+[element_outside_of_size_range.mkv](element_outside_of_size_range.mkv)
+
 
