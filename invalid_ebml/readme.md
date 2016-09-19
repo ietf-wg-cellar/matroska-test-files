@@ -64,3 +64,9 @@ The Elements of the EBML Header are restricted to Element Data Size values that 
 Similar to [invalid_EBML_ElementDataSize_in_EBMLHeader.mkv](invalid_EBML_ElementDataSize_in_EBMLHeader.mkv) but the Element Data Size of the DocType Element is 9 octets long.
 [really_invalid_EBML_ElementDataSize_in_EBMLHeader.mkv](really_invalid_EBML_ElementDataSize_in_EBMLHeader.mkv)
 
+## invalid_EBMLMaxIDLength.mkv
+
+Using an invalid EBMLMaxIDLength value of `3`.
+
+[invalid_EBMLMaxIDLength.mkv](invalid_EBMLMaxIDLength.mkv)
+
