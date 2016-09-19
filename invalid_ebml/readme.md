@@ -76,3 +76,9 @@ Matroska limits EBMLMaxSizeLength to `8` but this file uses `9`.
 
 [higher_EBMLMaxSizeLength_than_matroska_allows.mkv](higher_EBMLMaxSizeLength_than_matroska_allows.mkv)
 
+## lower_EBMLMaxSizeLength_than_elements_are_using.mkv
+
+The EBMLMaxSizeLength is set to `4` but the file contains one Element (a Void) which uses an Element Data Size of `6`.
+
+[lower_EBMLMaxSizeLength_than_elements_are_using.mkv](lower_EBMLMaxSizeLength_than_elements_are_using.mkv)
+
