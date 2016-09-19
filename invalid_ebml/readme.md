@@ -94,3 +94,9 @@ An unknown element (with Element ID 0x81) is stored at the beginning of the EBML
 
 [unknown_element.mkv](unknown_element.mkv)
 
+## unknown_sized_non_master_element.mkv
+
+A non-Master Element (DocType) uses an unknown Element Data Size.
+
+[unknown_sized_non_master_element.mkv](unknown_sized_non_master_element.mkv)
+
