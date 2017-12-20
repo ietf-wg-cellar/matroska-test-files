@@ -98,7 +98,7 @@ The sample comes from the [Big Buck Bunny](http://www.bigbuckbunny.org/index.php
 
 ### 7. Extra unknown/junk elements & damaged
 
-This file contains junk elements (elements not defined in the specs) either at the beggining or the end of Clusters. These elements should be skipped. There is also an invalid element at 451417 that should be skipped until the next valid Cluster is found.
+This file contains junk elements (elements not defined in the specs) either at the beginning or the end of Clusters. These elements should be skipped. There is also an invalid element at 451417 that should be skipped until the next valid Cluster is found.
 
 The sample contains H264 (1024x576 pixels), and stereo AAC. The source material is taken from the [Elephant Dreams](http://orange.blender.org/download) video project
 
@@ -116,7 +116,7 @@ The sample contains H264 (1024x576 pixels), and stereo AAC. The source material 
 
 ## Tools
 
-All these files were created with [mkvmerge](http://www.bunkus.org/videotools/mkvtoolnix/) and [mkclean](http://www.matroska.org/downloads/mkclean.html). They also pass the [mkvalidator](http://www.matroska.org/downloads/mkvalidator.html) test tool (the test file 4 needs the --live option to correctly valdiate the file), except for the damaged file, as it is damaged.
+All these files were created with [mkvmerge](http://www.bunkus.org/videotools/mkvtoolnix/) and [mkclean](http://www.matroska.org/downloads/mkclean.html). They also pass the [mkvalidator](http://www.matroska.org/downloads/mkvalidator.html) test tool (the test file 4 needs the --live option to correctly validate the file), except for the damaged file, as it is damaged.
 
 ## Contact
 
