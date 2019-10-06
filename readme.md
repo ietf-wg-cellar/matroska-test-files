@@ -118,6 +118,14 @@ The sample contains H264 (1024x576 pixels), and stereo AAC. The source material 
 
 All these files were created with [mkvmerge](http://www.bunkus.org/videotools/mkvtoolnix/) and [mkclean](http://www.matroska.org/downloads/mkclean.html). They also pass the [mkvalidator](http://www.matroska.org/downloads/mkvalidator.html) test tool (the test file 4 needs the --live option to correctly validate the file), except for the damaged file, as it is damaged.
 
+## License
+
+Both [Big Buck Bunny](http://www.bigbuckbunny.org/index.php/download/) and [Elephant Dreams](http://orange.blender.org/download) and licensed under the Creative Common License Attribution license, also known as CC-BY.
+
+The recommended license text for Big Buck Bunny is `(c) copyright 2008, Blender Foundation / www.bigbuckbunny.org`.
+
+The recommended license text for Elephant Dreams is `(c) copyright 2006, Blender Foundation / Netherlands Media Art Institute / www.elephantsdream.org`.
+
 ## Contact
 
 If you have any question about these files please contact us at contact@matroska.org
